@@ -42,7 +42,6 @@ public class CompraTest {
 
         PlaceOrderService placeOrderService = new PlaceOrderService();
         placeOrderService.goPlaceOrder();
-        DriverManager.esperaImplicita();
         //Compra completada
         
         PurchaseCompleteService purchaseCompleteService = new PurchaseCompleteService();
