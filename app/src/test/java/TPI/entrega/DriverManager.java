@@ -26,8 +26,8 @@ public class DriverManager {
         return wait;
     }
 
-    public static void EsperaImplicita(){
-        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(40));
+    public static void esperaImplicita(){
+        driver.manage().timeouts().implicitlyWait(Duration.ofSeconds(50));
     }
 
     public static void goSite(String url) {
