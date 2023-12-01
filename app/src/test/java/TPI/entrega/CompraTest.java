@@ -1,6 +1,5 @@
 package TPI.entrega;
 
-import org.openqa.selenium.devtools.v117.overlay.model.LineStyle.Pattern;
 import org.testng.Assert;
 import org.testng.annotations.BeforeMethod;
 import org.testng.annotations.Test;
@@ -50,7 +49,8 @@ public class CompraTest {
         
         //El titulo es igual a “Thank you for purchase!”
         Assert.assertTrue(
-            !purchaseCompleteService.getTitle().contains("Thank you for purchase!")
+            purchaseCompleteService.getTitle().contains("Thank you for purchase!"),
+            "El titulo no es igual a Thank you for purchase!"
         );
         //Esta habilitado el boton Continue Shopping
         Assert.assertTrue(
@@ -64,7 +64,7 @@ public class CompraTest {
         );
         // El numero de orden es un numero
         Assert.assertTrue(
-            !purchaseCompleteService.getNumberOrder().split("Your order # is:").toString().matches("[0-9]"),
+            !purchaseCompleteService.getNumberOrder().split("Your order # is:")[1].matches(".*//d+//.$"),
             "El numero de orden no es un numero"
         );
 
