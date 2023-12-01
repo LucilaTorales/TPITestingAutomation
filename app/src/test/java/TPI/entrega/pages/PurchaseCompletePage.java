@@ -3,7 +3,7 @@ package TPI.entrega.pages;
 import org.openqa.selenium.By;
 
 public class PurchaseCompletePage {
-    private By txt_title = By.xpath("//span[@data-ui-id='page-title-wrapper']");
+    private By txt_title = By.xpath("//span[contains(text(),'Thank you for purchase!')]");
     private By continue_shopping_button = By.xpath("//a[@class='action primary continue']");
     private By create_account_button = By.xpath("//a[@class='action primary']");
     private By txt_order_number = By.xpath("//p[contains(text(),'Your order #')]"); 
